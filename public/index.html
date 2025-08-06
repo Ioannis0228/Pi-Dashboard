@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" type="image/png" href="favicon.png"/> 
+  <title>Raspberry Pi Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>📊 Raspberry Pi Dashboard</h1>
+  <div class="stats">
+    <div class="card">🌡️ CPU Temp: <span id="temp">Loading...</span></div>
+    <div class="card">🖥️ CPU Load: <span id="cpu">Loading...</span>%</div>
+    <div class="card">💾 RAM Usage: <span id="mem">Loading...</span>%</div>
+    <div class="card">🗄️ Disk Usage: <span id="disk">Loading...</span>%</div>
+    <div class="card">⏳Uptime: <span id="uptime">Loading...</span></div>
+  </div>
+  <div class="chart-container">
+     <div class="chart-card">
+      <canvas id="tempChart"></canvas>
+     </div>
+     <div class="chart-card">
+      <canvas id="ramChart"></canvas>
+     </div>
+  </div>
+  <div class="stats">
+    <div class="card">📶 Wi-Fi: <span id="wifi">Loading...</span><br></div>
+    <div class="card">🔁 Bitrate: <span id="bitrate">Loading...</span></div>
+    <div class="card">📡 Signal: <span id="signal">Loading...</span></div>
+    <div class="wifi-quality">
+      <div>📶 Wi-Fi Link Quality</div>
+      <div class="bar-wrapper">
+        <div class="wifi-quality-bar" style="text-align: center;">
+          <div class="bar-fill" style="width: 0%;">
+            <span id="bar-value">Loading...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
